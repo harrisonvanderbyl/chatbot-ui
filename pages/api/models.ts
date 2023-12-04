@@ -9,8 +9,11 @@ export const config = {
 const handler = async (req: Request): Promise<Response> => {
   console.log('models.ts handler');
   try {
-  
+    const { key } = (await req.json()) as {
+      key: string;
+    };
 
+    console.log('key', key);
 
     console.log('OPENAI_API_HOST ', OPENAI_API_HOST);
 
