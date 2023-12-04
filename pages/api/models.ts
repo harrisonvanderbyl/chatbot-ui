@@ -7,28 +7,22 @@ export const config = {
 };
 
 const handler = async (req: Request): Promise<Response> => {
+  console.log('models.ts handler');
   try {
     const { key } = (await req.json()) as {
       key: string;
     };
 
-    let url = `${OPENAI_API_HOST}/v1/models`;
-    if (OPENAI_API_TYPE === 'azure') {
-      url = `${OPENAI_API_HOST}/openai/deployments?api-version=${OPENAI_API_VERSION}`;
-    }
+    console.log('key', key);
 
+    console.log('OPENAI_API_HOST ', OPENAI_API_HOST);
+
+
+    let url = `${OPENAI_API_HOST}/v1/models`;
+    console.log('url ', url);
     const response = await fetch(url, {
       headers: {
         'Content-Type': 'application/json',
-        ...(OPENAI_API_TYPE === 'openai' && {
-          Authorization: `Bearer ${key ? key : process.env.OPENAI_API_KEY}`
-        }),
-        ...(OPENAI_API_TYPE === 'azure' && {
-          'api-key': `${key ? key : process.env.OPENAI_API_KEY}`
-        }),
-        ...((OPENAI_API_TYPE === 'openai' && OPENAI_ORGANIZATION) && {
-          'OpenAI-Organization': OPENAI_ORGANIZATION,
-        }),
       },
     });
 
