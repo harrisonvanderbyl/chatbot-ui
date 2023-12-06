@@ -16,7 +16,7 @@ export const cleanSelectedConversation = (conversation: Conversation) => {
   if (!updatedConversation.model) {
     updatedConversation = {
       ...updatedConversation,
-      model: updatedConversation.model || OpenAIModels[OpenAIModelID.RWKV_3B],
+      model: updatedConversation.model || OpenAIModels[OpenAIModelID["recursal-aitown-3B"]],
     };
   }
 
@@ -67,7 +67,7 @@ export const cleanConversationHistory = (history: any[]): Conversation[] => {
   return history.reduce((acc: any[], conversation) => {
     try {
       if (!conversation.model) {
-        conversation.model = OpenAIModels[OpenAIModelID.RWKV_3B];
+        conversation.model = OpenAIModels[OpenAIModelID["recursal-aitown-3B"]];
       }
 
       if (!conversation.prompt) {

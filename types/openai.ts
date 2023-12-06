@@ -8,19 +8,19 @@ export interface OpenAIModel {
 }
 
 export enum OpenAIModelID {
-  RWKV_3B = 'recursal-aitown-3B',
+"recursal-aitown-3B" = 'recursal-aitown-3B',
   DUMMY = 'Dummy_Model',
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
-export const fallbackModelID = OpenAIModelID.RWKV_3B;
+export const fallbackModelID = OpenAIModelID["recursal-aitown-3B"];
 
 export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
  
 
-  [OpenAIModelID.RWKV_3B]: {
-    id: OpenAIModelID.RWKV_3B,
-    name: 'RWKV-3B',
+  [OpenAIModelID["recursal-aitown-3B"]]: {
+    id: OpenAIModelID["recursal-aitown-3B"],
+    name: 'recursal-aitown-3B',
     maxLength: 96000000,
     tokenLimit: 32000000,
   },

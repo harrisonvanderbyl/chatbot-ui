@@ -31,7 +31,7 @@ const handler = async (req: Request, res:any) => {
       url = `${OPENAI_API_HOST}/openai/deployments?api-version=${OPENAI_API_VERSION}`;
     }
 
-    const response = await axios({
+    const response = await axios.request({
       url,
       headers: {
         'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const handler = async (req: Request, res:any) => {
         };
       })
       .filter(Boolean);
-    res.status(200).send(JSON.stringify(models));
+    res.status(200).json( models );
   } catch (error) {
     console.error(error);
     if (error instanceof OpenAIError) {
