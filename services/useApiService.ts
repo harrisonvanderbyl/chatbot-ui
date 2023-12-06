@@ -27,21 +27,13 @@ const useApiService = () => {
 
   const getModels = useCallback(
     (params: GetModelsRequestProps, signal?: AbortSignal) => {
-      return fetchService.get('http://dev-7b-api.recursal-dev.com:40935' + `/v1/models/models`, {
-       
+      return fetchService.post<GetModelsRequestProps>(`/api/models`, {
+        body: { key: params.key },
         headers: {
           'Content-Type': 'application/json',
         },
         signal,
-      }).then((response:any) => {
-        return response.data.map((model: any) => {
-          return {
-            id: model.id,
-            name: model.id,
-          };
-        })
-      })
-        ;
+      });
     },
     [fetchService],
   );
