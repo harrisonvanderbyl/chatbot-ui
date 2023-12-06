@@ -38,6 +38,7 @@ interface Props {
   stopConversationRef: MutableRefObject<boolean>;
 }
 
+
 export const Chat = memo(({ stopConversationRef }: Props) => {
   const { t } = useTranslation('chat');
 

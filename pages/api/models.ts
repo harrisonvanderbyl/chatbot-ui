@@ -2,22 +2,37 @@ import { OPENAI_API_HOST, OPENAI_API_TYPE, OPENAI_API_VERSION, OPENAI_ORGANIZATI
 
 import { OpenAIModel, OpenAIModelID, OpenAIModels } from '@/types/openai';
 
+import axios from 'axios';
+
+// import https agent for self-signed certificate
+import https from 'https';
+import { OpenAIError } from '@/utils/server';
+
+
 export const config = {
-  runtime: 'edge',
+  // not edge
+  runtime: 'nodejs',
 };
 
-const handler = async (req: Request): Promise<Response> => {
+const handler = async (req: Request, res:any) => {
   try {
-    const { key } = (await req.json()) as {
-      key: string;
-    };
+    const { key } = req.body as any as { key: string  };
+
+    let httpagent;
+    if (OPENAI_API_HOST.includes("localhost")) {
+      
+      httpagent = new https.Agent({
+        rejectUnauthorized: false,
+      });
+    }
 
     let url = `${OPENAI_API_HOST}/v1/models`;
     if (OPENAI_API_TYPE === 'azure') {
       url = `${OPENAI_API_HOST}/openai/deployments?api-version=${OPENAI_API_VERSION}`;
     }
 
-    const response = await fetch(url, {
+    const response = await axios({
+      url,
       headers: {
         'Content-Type': 'application/json',
         ...(OPENAI_API_TYPE === 'openai' && {
@@ -30,23 +45,24 @@ const handler = async (req: Request): Promise<Response> => {
           'OpenAI-Organization': OPENAI_ORGANIZATION,
         }),
       },
-    });
+      // ignore self-signed certificate errors
+      
+      // agent: new (require('https')).Agent({ rejectUnauthorized: false })
+      ...(OPENAI_API_HOST.includes("localhost") && { httpsAgent: httpagent })
+    } );
 
     if (response.status === 401) {
-      return new Response(response.body, {
-        status: 500,
-        headers: response.headers,
-      });
+      
     } else if (response.status !== 200) {
       console.error(
         `OpenAI API returned an error ${
-          response.status
-        }: ${await response.text()}`,
+          res.status(401).json({ error: 'OpenAI API returned an error' })
+        }: ${JSON.stringify(response.data)}`,
       );
       throw new Error('OpenAI API returned an error');
     }
 
-    const json = await response.json();
+    const json = await response.data ;
 
     console.log(json);
 
@@ -59,11 +75,14 @@ const handler = async (req: Request): Promise<Response> => {
         };
       })
       .filter(Boolean);
-
-    return new Response(JSON.stringify(models), { status: 200 });
+    res.status(200).send(JSON.stringify(models));
   } catch (error) {
     console.error(error);
-    return new Response('Error', { status: 500 });
+    if (error instanceof OpenAIError) {
+      res.status(500).json({ error: error.message });
+    } else {
+      res.status(500).json({ error: 'Error' });
+    }
   }
 };
 

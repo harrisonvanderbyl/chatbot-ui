@@ -22,7 +22,8 @@ export class OpenAIError extends Error {
     this.code = code;
   }
 }
-
+import axios from 'axios';
+import https from 'https';
 export const OpenAIStream = async (
   model: OpenAIModel,
   systemPrompt: string,
@@ -31,10 +32,19 @@ export const OpenAIStream = async (
   messages: Message[],
 ) => {
   let url = `${OPENAI_API_HOST}/v1/chat/completions`;
+
+  let httpagent;
+  if (OPENAI_API_HOST.includes('localhost')) {
+    httpagent = new https.Agent({
+      rejectUnauthorized: false,
+    });
+  }
+
   if (OPENAI_API_TYPE === 'azure') {
     url = `${OPENAI_API_HOST}/openai/deployments/${AZURE_DEPLOYMENT_ID}/chat/completions?api-version=${OPENAI_API_VERSION}`;
   }
-  const res = await fetch(url, {
+  const res = await axios.request({
+    url,
     headers: {
       'Content-Type': 'application/json',
       ...(OPENAI_API_TYPE === 'openai' && {
@@ -48,7 +58,7 @@ export const OpenAIStream = async (
       }),
     },
     method: 'POST',
-    body: JSON.stringify({
+    data: {
       model: model.id,
       messages: [
         {
@@ -60,14 +70,18 @@ export const OpenAIStream = async (
       max_tokens: 1000,
       temperature: temperature,
       stream: true,
-    }),
+    },
+    // ignore self-signed certificate errors
+    httpsAgent: httpagent,
+    // streaming
+    responseType: 'stream',
   });
 
   const encoder = new TextEncoder();
   const decoder = new TextDecoder();
 
   if (res.status !== 200) {
-    const result = await res.json();
+    const result = await res.data;
     console.log(result);
     if (result.error) {
       console.log(result.error);
@@ -86,34 +100,7 @@ export const OpenAIStream = async (
     }
   }
 
-  const stream = new ReadableStream({
-    async start(controller) {
-      const onParse = (event: ParsedEvent | ReconnectInterval) => {
-        if (event.type === 'event') {
-          const data = event.data;
-
-          try {
-            const json = JSON.parse(data);
-            if (json.choices[0].finish_reason != null) {
-              controller.close();
-              return;
-            }
-            const text = json.choices[0].delta.content;
-            const queue = encoder.encode(text);
-            controller.enqueue(queue);
-          } catch (e) {
-            controller.error(e);
-          }
-        }
-      };
-
-      const parser = createParser(onParse);
-
-      for await (const chunk of res.body as any) {
-        parser.feed(decoder.decode(chunk));
-      }
-    },
-  });
+  const stream = await res.data;
 
   return stream;
 };
