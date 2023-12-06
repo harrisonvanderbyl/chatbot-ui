@@ -8,7 +8,7 @@ export interface OpenAIModel {
 }
 
 export enum OpenAIModelID {
-  RWKV_3B = 'RWKV_32_2560_32_17_QUInt8-pc-norr-ext.onnx',
+  RWKV_3B = 'recursal-aitown-3B',
   DUMMY = 'Dummy_Model',
 }
 
