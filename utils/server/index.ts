@@ -100,7 +100,7 @@ export const OpenAIStream = async (
     }
   }
 
-  const stream = await res.data;
+  const stream = res.data;
 
   return stream;
 };
