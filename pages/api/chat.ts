@@ -43,10 +43,13 @@ const handler = async (req: any, res: any) => {
 
 
     // let res know its a stream
+    res.writeHead(200, {
+      'Content-Type': 'text/event-stream',
+    });
  
 
 
-    stream.on('data', (data: Buffer) => {
+    stream.on('data', async (data: Buffer) => {
       bufferHolder = bufferHolder + data.toString('utf-8');
 
       const text = bufferHolder.slice(0, bufferHolder.lastIndexOf('data: '));
@@ -90,6 +93,9 @@ const handler = async (req: any, res: any) => {
 
         console.log(choice);
         res.write(choice.delta.content);
+        res.flush()
+        // wait for next tick
+        // await new Promise((resolve) => setTimeout(resolve, 100));
       }
     }}
     );

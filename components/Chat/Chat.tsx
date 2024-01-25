@@ -117,14 +117,19 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
           });
         }
         const controller = new AbortController();
+        console.log("send fetch")
         const response = await fetch(endpoint, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            
           },
+         
           signal: controller.signal,
           body,
+
         });
+        console.log("response-got")
         if (!response.ok) {
           homeDispatch({ field: 'loading', value: false });
           homeDispatch({ field: 'messageIsStreaming', value: false });
@@ -148,21 +153,29 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             };
           }
           homeDispatch({ field: 'loading', value: false });
-          const reader = data.getReader();
+          const reader = response.body.getReader();
           const decoder = new TextDecoder();
           let done = false;
           let isFirst = true;
           let text = '';
+          console.log("start streaming")
           while (!done) {
             if (stopConversationRef.current === true) {
               controller.abort();
               done = true;
               break;
             }
+            console.log("start reading")
+            // read whats available
+            // const { value, done: doneReading } = await reader.read();
+            // to slow, waits for the whole response to be read
+            // the below code reads the response as it comes in and is completely different
             const { value, done: doneReading } = await reader.read();
+            
             done = doneReading;
             const chunkValue = decoder.decode(value);
             text += chunkValue;
+            console.log("chunkValue", chunkValue)
             if (isFirst) {
               isFirst = false;
               const updatedMessages: Message[] = [

@@ -3,7 +3,7 @@ export const DEFAULT_SYSTEM_PROMPT =
   "You are ChatGPT, a large language model trained by OpenAI. Follow the user's instructions carefully. Respond using markdown.";
 
 export const OPENAI_API_HOST =
-  process.env.OPENAI_API_HOST || 'http://dev-7b-api.recursal-dev.com:40935';
+  process.env.OPENAI_API_HOST || 'https://aitown-router-a.recursal-dev.com';
 
 export const DEFAULT_TEMPERATURE = 
   parseFloat(process.env.NEXT_PUBLIC_DEFAULT_TEMPERATURE || "1");
