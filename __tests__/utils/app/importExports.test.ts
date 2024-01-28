@@ -192,7 +192,7 @@ describe('cleanData Functions', () => {
                 content: 'Hi',
               },
             ],
-            model: OpenAIModels[OpenAIModelID.RWKV_3B],
+            model: OpenAIModels[OpenAIModelID.DUMMY],
             prompt: DEFAULT_SYSTEM_PROMPT,
             temperature: DEFAULT_TEMPERATURE,
             folderId: null,

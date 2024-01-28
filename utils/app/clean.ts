@@ -16,7 +16,7 @@ export const cleanSelectedConversation = (conversation: Conversation) => {
   if (!updatedConversation.model) {
     updatedConversation = {
       ...updatedConversation,
-      model: updatedConversation.model || OpenAIModels[OpenAIModelID["recursal-aitown-3B"]],
+      model: updatedConversation.model || OpenAIModels[OpenAIModelID["RWKV-7B"]],
     };
   }
 
