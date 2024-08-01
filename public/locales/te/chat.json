@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "ఒపెన్ ఎయి ఐ API కీ అవసరం",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "దయచేసి మీ OpenAI API కీని సైడ్ బార్ యొక్క దిగువ ఎడమ భాగంలో సెట్ చేయండి.",
+  "Featherless Api Key Required": "ఒపెన్ ఎయి ఐ API కీ అవసరం",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "దయచేసి మీ featherless api కీని సైడ్ బార్ యొక్క దిగువ ఎడమ భాగంలో సెట్ చేయండి.",
   "Stop Generating": "జెనరేట్ చేస్తున్న ప్రక్రియ నిలిపేయి",
   "Prompt limit is {{maxLength}} characters": "ప్రాంప్ట్(సంకేతం) పరిమితి {{maxLength}} అక్షరాలు మాత్రమే",
   "System Prompt": "సిస్టమ్ ప్రాంప్ట్",
@@ -18,7 +18,7 @@
   "You": "నీవు",
   "Cancel": "Cancel",
   "Save & Submit": "Save & Submit",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "మీరు ఖాళీలో ఎడమ ఎరుగులో మీ OpenAI API కీను సెట్ చేస్తున్నారని ఖచ్చితం చేయండి.",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "మీరు ఖాళీలో ఎడమ ఎరుగులో మీ featherless api కీను సెట్ చేస్తున్నారని ఖచ్చితం చేయండి.",
   "If you completed this step, OpenAI may be experiencing issues.": "మీరు ఈ హంతం పూర్తి చేసినా, OpenAI సమస్యలు ఉన్నట్లు ఉంటాయి.",
   "click if using a .env.local file": "click if using a .env.local file",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "సందేశం పరిమితి {{maxLength}} అక్షరాలు. మీరు {{valueLength}} అక్షరాలు నమోదు చేసారు.",

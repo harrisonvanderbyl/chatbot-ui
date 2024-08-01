@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "OpenAI API-nyckel krävs",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "Vänligen ange din OpenAI API-nyckel längst ner till vänster i sidofältet.",
+  "Featherless Api Key Required": "featherless api-nyckel krävs",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "Vänligen ange din featherless api-nyckel längst ner till vänster i sidofältet.",
   "Stop Generating": "Sluta generera",
   "Prompt limit is {{maxLength}} characters": "Din prompt kan inte ha fler än {{maxLength}} tecken",
   "System Prompt": "System prompt",
@@ -18,7 +18,7 @@
   "You": "Du",
   "Cancel": "Avbryt",
   "Save & Submit": "Spara & Skicka",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "Se till att du har angett din OpenAI API-nyckel längst ner till vänster i sidofältet.",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "Se till att du har angett din featherless api-nyckel längst ner till vänster i sidofältet.",
   "If you completed this step, OpenAI may be experiencing issues.": "Om du slutförde det här steget kan OpenAI ha problem.",
   "click if using a .env.local file": "klicka om du använder en .env.local-fil",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "Meddelandegränsen är {{maxLength}} tecken. Du har angett {{valueLength}} tecken.",

@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "OpenAIのAPIキーが必要です",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "左下のサイドバーでOpenAIのAPIキーを設定してください",
+  "Featherless Api Key Required": "OpenAIのAPIキーが必要です",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "左下のサイドバーでOpenAIのAPIキーを設定してください",
   "Stop Generating": "回答をストップ",
   "Prompt limit is {{maxLength}} characters": "プロンプトの文字数は{{maxLength}}文字までです",
   "System Prompt": "システムのプロンプト",
@@ -18,7 +18,7 @@
   "You": "あなた",
   "Cancel": "キャンセル",
   "Save & Submit": "Save & Submit",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "OpenAIのAPIキーがサイドバーの左下に設定されていることを確認してください。",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "OpenAIのAPIキーがサイドバーの左下に設定されていることを確認してください。",
   "If you completed this step, OpenAI may be experiencing issues.": "このステップを完了した場合、OpenAIに問題が発生している可能性があります。",
   "click if using a .env.local file": "もし.env.localファイルを使用している場合はこちらをクリックしてください",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "メッセージの文字数は{{maxLength}}文字までです。あなたは{{valueLength}}文字を入力しました。",

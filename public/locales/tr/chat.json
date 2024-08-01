@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "OpenAI API Anahtarı Gerekli",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "Lütfen OpenAI API anahtarınızı yan çubuğun sol altınan'dan ayarlayın.",
+  "Featherless Api Key Required": "featherless api Anahtarı Gerekli",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "Lütfen featherless api anahtarınızı yan çubuğun sol altınan'dan ayarlayın.",
   "Stop Generating": "Durdur",
   "Prompt limit is {{maxLength}} characters": "Prompt sınırı {{maxLength}} karakterdir",
   "System Prompt": "Sistem Prompt",
@@ -18,7 +18,7 @@
   "You": "Sen",
   "Cancel": "İptal",
   "Save & Submit": "Kaydet ve Gönder",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "OpenAI API anahtarınızın yan çubuğun sol altında ayarlandığından emin ol.",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "featherless api anahtarınızın yan çubuğun sol altında ayarlandığından emin ol.",
   "If you completed this step, OpenAI may be experiencing issues.": "Bu adımı tamamladıysanız, OpenAI sorun yaşıyor olabilir.",
   "click if using a .env.local file": "Eğer .env.local dosyası kullanıyorsanız tıklayın",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "Mesaj sınırı {{maxLength}} karakterdir. {{valueLength}} karakter girdiniz.",

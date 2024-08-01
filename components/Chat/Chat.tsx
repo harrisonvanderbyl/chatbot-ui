@@ -371,7 +371,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
           <div className="text-center text-lg text-black dark:text-white">
             <div className="mb-8">{`Chatbot UI is an open source clone of Featherless's ChatGPT UI.`}</div>
             <div className="mb-2 font-bold">
-              Important: Chatbot UI is 100% unaffiliated with Featherless.
+              
             </div>
           </div>
           <div className="text-center text-gray-500 dark:text-gray-400">
@@ -385,11 +385,11 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             </div>
             <div className="mb-2">
               {t(
-                'Please set your Featherless API key in the bottom left of the sidebar.',
+                'Please set your Featherless Api Key in the bottom left of the sidebar.',
               )}
             </div>
             <div>
-              {t("If you don't have an Featherless API key, you can get one here: ")}
+              {t("If you don't have an Featherless Api Key, you can get one here: ")}
               <a
                 href="https://featherless.ai"
                 target="_blank"

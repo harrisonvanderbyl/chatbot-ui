@@ -93,7 +93,7 @@ export const OpenAIStream = async (
       );
     } else {
       throw new Error(
-        `OpenAI API returned an error: ${
+        `featherless api returned an error: ${
           decoder.decode(result?.value) || result.statusText
         }`,
       );

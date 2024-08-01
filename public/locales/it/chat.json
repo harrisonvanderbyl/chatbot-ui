@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "E' richiesta la chiave API OpenAI",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "Per favore, inserisci la tua Chiave API OpenAI in basso a sinistra nella barra laterale",
+  "Featherless Api Key Required": "E' richiesta la chiave API OpenAI",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "Per favore, inserisci la tua Chiave API OpenAI in basso a sinistra nella barra laterale",
   "Stop Generating": "Interrompi la generazione",
   "Prompt limit is {{maxLength}} characters": "Il limite del messaggio è di {{maxLength}} caratteri",
   "System Prompt": "Prompt del sistema",
@@ -18,7 +18,7 @@
   "You": "Tu",
   "Cancel": "Annulla",
   "Save & Submit": "Salva e invia",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "Assicurati che la tua chiave API OpenAI sia inserita in basso a sinistra nella barra laterale",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "Assicurati che la tua chiave API OpenAI sia inserita in basso a sinistra nella barra laterale",
   "If you completed this step, OpenAI may be experiencing issues.": "Se hai completato questo passaggio, OpenAI potrebbe avere problemi.",
   "click if using a .env.local file": "Fai click se stai utilizzando un file .env.local",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "Il limite del messaggio è di {{maxLength}} caratteri. Hai inserito {{valueLength}} caratteri.",

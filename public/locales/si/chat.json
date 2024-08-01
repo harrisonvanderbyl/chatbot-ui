@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "OpenAI API යතුර අවශ්‍යයි",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "කරුණාකර ඔබේ OpenAI API යතුර පැති තීරුවේ පහළ වම්පසින් සකසන්න.",
+  "Featherless Api Key Required": "featherless api යතුර අවශ්‍යයි",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "කරුණාකර ඔබේ featherless api යතුර පැති තීරුවේ පහළ වම්පසින් සකසන්න.",
   "Stop Generating": "උත්පාදනය නවත්වන්න",
   "Prompt limit is {{maxLength}} characters": "වචන සීමාව අනුලකුණු {{maxLength}} කි",
   "System Prompt": "පද්ධති ඉඟිය",
@@ -18,7 +18,7 @@
   "You": "ඔබ",
   "Cancel": "Cancel",
   "Save & Submit": "Save & Submit",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "ඔබේ OpenAI API යතුර පැති තීරුවේ පහළ වම්පස සකසා ඇති බවට වග බලා ගන්න.",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "ඔබේ featherless api යතුර පැති තීරුවේ පහළ වම්පස සකසා ඇති බවට වග බලා ගන්න.",
   "If you completed this step, OpenAI may be experiencing issues.": "ඔබ මෙම පියවර සම්පූර්ණ කළේ නම්, OpenAI හි ගැටලුවක් විය හැකිය.",
   "click if using a .env.local file": "click if using a .env.local file",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "පණිවිඩ සීමාව අකුරු {{maxLength}} කි. ඔබ අක්ෂර {{valueLength}} ඇතුළත් කර ඇත.।",

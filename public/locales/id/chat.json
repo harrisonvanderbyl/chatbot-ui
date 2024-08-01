@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "Memerlukan Kunci API OpenAI",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "Silakan atur kunci API OpenAI Anda di bagian kiri bawah bilah sisi.",
+  "Featherless Api Key Required": "Memerlukan Kunci API OpenAI",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "Silakan atur kunci API OpenAI Anda di bagian kiri bawah bilah sisi.",
   "Stop Generating": "Berhenti Menghasilkan",
   "Prompt limit is {{maxLength}} characters": "Batas karakter untuk prompt adalah {{maxLength}} karakter",
   "System Prompt": "Prompt Sistem",
@@ -18,7 +18,7 @@
   "You": "Anda",
   "Cancel": "Cancel",
   "Save & Submit": "Save & Submit",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "Pastikan kunci API OpenAI Anda diatur di bagian kiri bawah bilah sisi.",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "Pastikan kunci API OpenAI Anda diatur di bagian kiri bawah bilah sisi.",
   "If you completed this step, OpenAI may be experiencing issues.": "Jika Anda telah menyelesaikan langkah ini, OpenAI mungkin mengalami masalah.",
   "click if using a .env.local file": "klik jika menggunakan file .env.local",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "Batas karakter untuk pesan adalah {{maxLength}} karakter. Anda telah memasukkan {{valueLength}} karakter.",

@@ -55,11 +55,11 @@ const handler = async (req: Request, res:any) => {
       
     } else if (response.status !== 200) {
       console.error(
-        `OpenAI API returned an error ${
-          res.status(401).json({ error: 'OpenAI API returned an error' })
+        `featherless api returned an error ${
+          res.status(401).json({ error: 'featherless api returned an error' })
         }: ${JSON.stringify(response.data)}`,
       );
-      throw new Error('OpenAI API returned an error');
+      throw new Error('featherless api returned an error');
     }
 
     const json = await response.data ;

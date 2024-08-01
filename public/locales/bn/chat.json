@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "OpenAI API key বাধ্যতামূলক",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "দয়া করে আপনার OpenAI API key বামে সাইডবারের নিচের দিকে সেট করুন।",
+  "Featherless Api Key Required": "Featherless Api Key বাধ্যতামূলক",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "দয়া করে আপনার Featherless Api Key বামে সাইডবারের নিচের দিকে সেট করুন।",
   "Stop Generating": "বার্তা জেনারেট করা বন্ধ করুন",
   "Prompt limit is {{maxLength}} characters": "নির্দেশনা (বার্তা) সীমা সর্বোচ্চ {{maxLength}} অক্ষর",
   "System Prompt": "সিস্টেম নির্দেশনা (বার্তা)",
@@ -18,7 +18,7 @@
   "You": "তুমি",
   "Cancel": "বাতিল করুন",
   "Save & Submit": "সংরক্ষণ করুন এবং জমা দিন",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "নিশ্চিত করুন যে আপনার OpenAI API key সাইডবারের নীচে বাম দিকে সেট করা আছে।",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "নিশ্চিত করুন যে আপনার Featherless Api Key সাইডবারের নীচে বাম দিকে সেট করা আছে।",
   "If you completed this step, OpenAI may be experiencing issues.": "আপনি এই ধাপটি সম্পন্ন করে থাকলে, হতে পারে যে OpenAI কোনো সমস্যার সম্মুখীন হয়েছে।",
   "click if using a .env.local file": "একটি .env.local ফাইল ব্যবহার করলে এখানে ক্লিক করুন",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "বার্তার সর্বোচ্চ সীমা হল {{maxLength}} অক্ষর৷ আপনি {{valueLength}} অক্ষর লিখেছেন।",

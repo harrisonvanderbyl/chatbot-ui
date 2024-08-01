@@ -1,6 +1,6 @@
 {
-  "OpenAI API Key Required": "Необходим ключ OpenAI",
-  "Please set your OpenAI API key in the bottom left of the sidebar.": "Пожалуйста введите API-ключ OpenAI в левом нижнем углу",
+  "Featherless Api Key Required": "Необходим ключ OpenAI",
+  "Please set your Featherless Api Key in the bottom left of the sidebar.": "Пожалуйста введите API-ключ OpenAI в левом нижнем углу",
   "Stop Generating": "Прекратить",
   "Prompt limit is {{maxLength}} characters": "Лимит сообщения на символы: {{maxLength}} символов",
   "System Prompt": "Системное сообщение",
@@ -18,7 +18,7 @@
   "You": "Вы",
   "Cancel": "Отмена",
   "Save & Submit": "Отредактировать",
-  "Make sure your OpenAI API key is set in the bottom left of the sidebar.": "Убедитесь, что вы ввели API-ключ OpenAI.",
+  "Make sure your Featherless Api Key is set in the bottom left of the sidebar.": "Убедитесь, что вы ввели API-ключ OpenAI.",
   "If you completed this step, OpenAI may be experiencing issues.": "Если вы выполнили этот шаг, то возможно OpenAI может испытывать проблемы",
   "click if using a .env.local file": "click if using a .env.local file",
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "Лимит сообщения: {{maxLength}} символов. Вы ввели {{valueLength}} символов.",
