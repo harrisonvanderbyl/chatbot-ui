@@ -67,7 +67,7 @@ export const cleanConversationHistory = (history: any[]): Conversation[] => {
   return history.reduce((acc: any[], conversation) => {
     try {
       if (!conversation.model) {
-        conversation.model = OpenAIModels[OpenAIModelID["recursal-aitown-3B"]];
+        conversation.model = OpenAIModels[OpenAIModelID["RWKV-7B"] as any as OpenAIModelID];
       }
 
       if (!conversation.prompt) {
